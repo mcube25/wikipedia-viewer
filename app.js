@@ -15,8 +15,8 @@ function searchLat(){
      .then(function(response) {
          var pages = response.query.pages;
          for (var page in pages) {
-             getElementById('demo').innerHTML = ("Latitute: " + pages[page].coordinates[0].lat);
-             getElementById('demo').innerHTML =("Longitude: " + pages[page].coordinates[0].lon);
+            document.getElementById('cemo').innerHTML = ("Latitute: " + pages[page].coordinates[0].lat);
+             document.getElementById('bemo').innerHTML = ("Longitude: " + pages[page].coordinates[0].lon);
          }
      })
      .catch(function(error){console.log(error);});
@@ -42,8 +42,8 @@ fetch(url)
   .then(function(response) {
       var randoms = response.query.random;
       for (var r in randoms) {
-          getElementById('demo').innerHTML =(randoms[r].title);
+        document.getElementById('demo').innerHTML = (randoms[r].title);
       }
   })
-  .catch(function(error){getElementById('demo').innerHTML =(error);});
+  .catch(function(error){console.lo(error);});
 }
