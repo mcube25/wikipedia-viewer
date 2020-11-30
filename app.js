@@ -31,7 +31,8 @@ var params = {
   action: "query",
   format: "json",
   list: "random",
-  rnlimit: "5"
+  rnlimit: "8",
+  rncontinue: "0.559881820010|0.559881954661|47659388|0",
 };
 
 url = url + "?origin=*";
@@ -43,7 +44,8 @@ fetch(url)
       var randoms = response.query.random;
       for (var r in randoms) {
         document.getElementById('demo').innerHTML = (randoms[r].title);
+        console.log(randoms[r].title)
       }
   })
-  .catch(function(error){console.lo(error);});
+  .catch(function(error){console.log(error);});
 }
