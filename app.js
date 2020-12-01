@@ -43,7 +43,7 @@ fetch(url)
   .then(function(response) {
       var randoms = response.query.random;
       for (var r in randoms) {
-        document.getElementById('demo').innerHTML = (randoms[r].title);
+      document.getElementById('demo').innerHTML = (randoms[r].title);
         console.log(randoms[r].title)
       }
   })
